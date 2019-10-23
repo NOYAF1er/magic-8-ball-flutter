@@ -32,20 +32,15 @@ class _BallState extends State<Ball> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Expanded(
-          child: FlatButton(
-            onPressed: () {
-              setState(() {
-                _ballNumber = Random().nextInt(5) + 1;
-              });
-            },
-            child: Image.asset('images/ball$_ballNumber.png'),
-          ),
-        ),
-      ],
+    return Center(
+      child: FlatButton(
+        onPressed: () {
+          setState(() {
+            _ballNumber = Random().nextInt(5) + 1;
+          });
+        },
+        child: Image.asset('images/ball$_ballNumber.png'),
+      ),
     );
   }
 }
